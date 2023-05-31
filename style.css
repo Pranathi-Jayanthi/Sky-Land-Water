@@ -1,0 +1,486 @@
+@import url('https://fonts.googleapis.com/css2?family=Alkatra:wght@500;600&family=Roboto:wght@300;400;700&display=swap');
+
+* {
+  padding: 0;
+  margin: 0;
+  border: 0;
+}
+
+html,body {
+  overflow-x: hidden;
+  height: 100vh;
+  scroll-behavior: smooth;
+  scroll-snap-type: y mandatory;
+}
+
+/* Set the height of each section to 100vh and remove margins and padding */
+section {
+  height: 100vh;
+  width: 100vw;
+  margin: 0;
+  padding: 0;
+  scroll-snap-align: center;
+}
+
+/* Style the first section and make its background color cover the whole viewport */
+#section1 {
+  background-color: black;
+  background-image: url("https://wallup.net/wp-content/uploads/2016/01/285727-abstract-Earth.jpg");
+  transform: rotate(180deg)scaleX(-1);
+  background-size: contain;
+  background-repeat: no-repeat;
+  background-position: 30vw 0;
+  display: flex;
+  align-items: center;
+}
+
+/* Style the second section and make its background color cover the whole viewport */
+#section2 {
+  background-image: url("https://img.freepik.com/free-photo/vivid-blurred-colorful-wallpaper-background_58702-3798.jpg");
+  background-size: cover;
+  background-position: center;
+  position: relative;
+}
+
+/* Style the third section and make its background color cover the whole viewport */
+#section3 {
+  background-image: url("https://img.freepik.com/free-vector/blank-nature-park-landscape-scene-daytime_1308-62625.jpg?w=1060&t=st=1680680196~exp=1680680796~hmac=8b8b7d9c6252d35244a7a066e6cc953e656f16eda7198a78b30a5ac1b3e37abd");
+  background-size: cover;
+  background-position: center;
+  position: relative;
+}
+
+/* Style the fourth section and make its background color cover the whole viewport */
+#section4 {
+  background-image: url("https://i.pinimg.com/originals/28/68/78/286878f2bd311db878a2f494a961e858.jpg");
+  background-size: cover;
+  background-position: center;
+  position: relative;
+  overflow: hidden;
+}
+
+/* Style the glass button with a box-shadow and border-radius to create a glassmorphism effect */
+.glass-button {
+  width: 70%;
+  height: 20%;
+  background-color: rgba(255, 255, 255, 0.3);
+  color: white;
+  border: none;
+  font-family: 'Alkatra', cursive;  font-size: small;
+  font-size: 1.4vw;
+  transition: all 0.3s ease-in-out;
+}
+
+.buttons-container{
+	width: 30%;
+	height: 80%;
+	display: flex;
+	justify-content: space-evenly;
+	align-items: center;
+	flex-direction: column;
+	transform: rotate(180deg)scaleX(-1);
+	margin-left: 10vw;
+}
+
+#b1:hover {
+  background-image: linear-gradient(to bottom, #72ccf2, #e4e2e0);
+  color: black;
+  box-shadow: 0px 0px 10px rgba(255, 255, 255, 0.5);
+  font-size: 1.7vw;
+}
+
+#b2:hover {
+  background-image: linear-gradient(to bottom, #98fca4, #5a3e17);
+  color: black;
+  box-shadow: 0px 0px 10px rgba(255, 255, 255, 0.5);
+  font-size: 1.7vw;
+}
+
+#b3:hover {
+  background-image: linear-gradient(to bottom, rgb(142, 219, 255), #103a71);
+  color: black;
+  box-shadow: 0px 0px 10px rgba(255, 255, 255, 0.5);
+  font-size: 1.7vw;
+}
+
+.plane{
+	width: 30%;
+	height: 30%;
+	animation: ani 4s linear infinite;
+	position: absolute;
+	z-index: 1000;
+}
+
+@keyframes ani {
+  0% {
+    transform: translateX(100vw) translateY(50vh) rotate(0deg);
+  }
+  50% {
+    transform: translateX(0vw) translateY(30vh) rotate(15deg);
+  }
+  100% {
+    transform: translateX(-100vw) translateY(20vh) rotate(25deg);
+  }
+}
+
+.cloud1{
+	width: 20%;
+	height: 46%;
+	animation: ani2 50s linear infinite;
+	position: absolute;
+    top: 60vh;
+    left: 68vw;
+	z-index: 999;
+}
+
+.cloud2{
+	width: 20%;
+	height: 40%;
+	animation: sani 8s linear infinite;
+	position: absolute;
+    top: 48vh;
+    left:70vw;
+	z-index: 999;
+}
+
+.cloud3{
+	width: 20%;
+	height: 40%;
+	animation: ani1 50s linear infinite;
+	position: absolute;    
+	top: -6vh;
+    left: 65vw;
+	z-index: 999;
+}
+
+.cloud4{
+	width: 25%;
+	height: 45%;
+	animation: sani 8s linear infinite;
+	position: absolute;
+	top: 35vh;
+    left: 5vw;
+	z-index: 999;
+}
+
+.cloud5{
+	width: 30%;
+	height: 50%;
+	animation: sani 5s linear infinite;
+	position: absolute;
+	top: 18vh;
+    left: 35vw;
+	z-index: 999;
+}
+
+@keyframes ani1 {
+  from {
+    transform: translateX(-100vw);
+  }
+  to {
+    transform: translateX(100vw);
+  }
+}
+
+@keyframes ani2 {
+  from {
+    transform: translateX(100vw);
+  }
+  to {
+    transform: translateX(-100vw);
+  }
+}
+
+.sun {
+	width: 200px;
+	height: 200px;
+	position: absolute;
+	top: 1vw;
+	right: 3vw;
+	animation: spin 10s linear infinite;
+	z-index: 1000;
+}
+
+@keyframes spin {
+  from {
+    transform: rotate(0deg);
+  }
+  to {
+    transform: rotate(360deg);
+  }
+}
+
+.bird{
+	width: 180px;
+	height: 180px;
+	position: absolute;
+	z-index: 1000;
+	top: 65vh;
+	animation: bani 8s linear infinite;
+}
+
+@keyframes bani {
+  0% {
+    transform: translateX(-50vw) rotate(0deg);
+  }
+  25% {
+    transform: translateX(-10vw) rotate(5deg);
+  }
+  50% {
+    transform: translateX(30vw) rotate(10deg);
+  }
+  75% {
+    transform: translateX(70vw) rotate(15deg);
+  }
+  100% {
+    transform: translateX(100vw) rotate(20deg);
+  }
+}
+
+@keyframes sani{
+	0%{
+		transform: translateY(-40px);
+	}
+	50%{
+		transform: translateY(0);
+	}
+	100%{
+		transform: translateY(-40px);
+	}
+}
+
+.bunny{
+	width: 15vw;
+	height: 30vh;
+	position: absolute;
+	top: 32vh;
+	left: 30vw;
+	animation: rani 2.5s linear infinite;
+}
+
+@keyframes rani{
+	0%{
+		transform: translateY(0);
+	}
+	25%{
+		transform: translateY(15vh);
+	}
+	50%{
+		transform: translateY(0);
+	}
+	75%{
+		transform: translateY(15vh);
+	}
+	100%{
+		transform: translateY(0);
+	}
+}
+
+.lion{
+	width: 22vw;
+	height: 28vh;
+	position: absolute;
+	top: 50vh;
+	left: -2vw;
+	animation: sani 5s linear infinite;
+}
+
+.birdg{
+	position: absolute;
+	top: 15vh;
+	width: 20vw;
+	height: 30vh;
+	transform: rotate(10deg);
+	animation: ani2 15s linear infinite;
+}
+
+@keyframes grpani{
+	0%{
+		transform: translateX(-70vw);
+	}
+	25%{
+		transform: translateX(-50vw);
+	}
+	50%{
+		transform: translateX(0vw);
+	}
+	75%{
+		transform: translateX(50vw);
+	}
+	100%{
+		transform: translateX(100vw);
+	}
+}
+
+.grp{
+	animation: grpani 15s linear infinite;
+}
+
+.flower{
+	width: 5vw;
+	height: 15vh;
+	position: absolute;
+	bottom: -1vh;
+	left: 2vw;
+	transform: rotate(-20deg);
+}
+
+.flower1{
+	width: 5vw;
+	height: 20vh;
+	position: absolute;
+	bottom: 3vh;
+	left: 3vw;
+}
+
+.flower2{
+	width: 5vw;
+	height: 18vh;
+	position: absolute;
+	bottom: -1vh;
+	left: 5vw;
+	transform: rotate(20deg);
+}
+
+.flowers{
+	animation: swing 2s ease-in-out infinite;
+	position: absolute;
+	left: -1vw;
+	bottom: -2vh;
+}
+
+@keyframes swing {
+  0% {
+    transform: rotateZ(0deg);
+  }
+  50% {
+    transform: rotateZ(10deg);
+  }
+  100% {
+    transform: rotateZ(0deg);
+  }
+}
+
+.bubbles1{
+	width: 50vw;
+	height: 100vh;
+	position: absolute;
+	bottom: 0;
+	left: -40vw;
+}
+
+.bubbles2{
+	width: 50vw;
+	height: 100vh;
+	position: absolute;
+	bottom: 0;
+	left: 86vw;
+}
+
+.fish{
+	position: absolute;
+	bottom: 8vh;
+	animation: fani 15s ease-in-out infinite;
+}
+
+@keyframes fani {
+  from {
+    transform: translateX(100vw);
+  }
+  to {
+    transform: translateX(-30vw);
+  }
+}
+
+.octopus{
+	width: 22vw;
+	height: 44vh;
+	position: absolute;
+	bottom: 38vh;
+	left: 52vw;
+	animation: sani 5s ease-in-out infinite;
+}
+
+.starfish{
+	width: 12vw;
+	height: 26vh;
+	position: absolute;
+	bottom: 48vh;
+	left: 35vw;
+	animation: spin 20s infinite;
+}
+
+.jellyfish{
+	width: 12vw;
+	height: 24vh;
+	position: absolute;
+	bottom: 32vh;
+	left: 15vw;
+	animation: swing 3s infinite;
+}
+
+.coral{
+	width: 26vw;
+	height: 52vh;
+	position: absolute;
+	bottom: -12vh;
+	left: -6vw;
+	transform: rotate(-8yydeg);
+}
+
+.coral1{
+	width: 30vw;
+	height: 60vh;
+	position: absolute;
+	bottom: -20vh;
+	right: -6vw;
+	transform: rotate(-8deg);
+}
+
+.fgrp{
+	width: 15vw;
+	height: 30vh;
+	position: absolute;
+	left: 35vh;
+	bottom: 0vh;
+	animation: fani 15s ease-in-out infinite;
+}
+
+.seahorse{
+	width: 15vw;
+	height: 30vh;
+	position: absolute;
+	bottom: 40vh;
+	left: 78vw;
+	animation: sani 4s infinite;
+}
+
+.crab{
+	width: 10vw;
+	height: 20vh;
+	position: absolute;
+	bottom: 60vh;
+	left: 5vw;
+	animation: cani 10s infinite;
+}
+
+@keyframes cani{
+	0% {
+    transform: translateX(0vw) translateY(0vh);
+  }
+  50% {
+    transform: translateX(5vw) translateY(-40vh);
+  }
+  100% {
+    transform: translateX(0vw) translateY(0vh);
+  }
+}
+
+.sun1{
+	width: 8vw;
+	height: 16vh;
+	position: absolute;
+	top: 2vh;
+	left: 1vw;
+	animation: spin 8s infinite;
+}
